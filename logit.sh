@@ -48,7 +48,7 @@ logit() {
     message="$*"
 
     local timestamp
-    timestamp=$(date +"%Y-%m-%dT%H:%M:%S%z")  # ISO 8601 with timezone
+    timestamp=$(date +"%Y-%m-%dT%H:%M:%S%z") 
 
     local line="${timestamp} ${HOST} ${program_name}[${PID}]: [${level}] ${message}"
 
@@ -59,7 +59,7 @@ logit() {
     fi
 }
 
-# Convenience wrappers
+# Wrappers
 log_info()  { logit -l INFO "$@"; }
 log_warn()  { logit -l WARN "$@"; }
 log_error() { logit -l ERROR "$@"; }
